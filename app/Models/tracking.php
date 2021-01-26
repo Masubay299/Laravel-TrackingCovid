@@ -13,7 +13,7 @@ class tracking extends Model
     protected $fillable = ['id_rw','jumlah_positif','jumlah_sembuh','jumlah_meninggal','tanggal'];
     public $timestamps = true;
 
-    public function rw(){
+    public function Rw(){
         return $this->belongsTo(rw::class);
     }
 }

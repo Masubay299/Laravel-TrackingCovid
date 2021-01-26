@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    Ini halaman Dashboard
+                    Ini halaman Kelurahan
                 </div>
             </div>
         </div>

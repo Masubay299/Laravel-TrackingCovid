@@ -1,7 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProvinsiController;
+use App\Http\Controllers\KotaController;
+use App\Http\Controllers\KecamatanController;
+use App\Http\Controllers\KelurahanController;
+use App\Http\Controllers\RwController;
+use App\Http\Controllers\TrackingController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,6 +27,12 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/dashboard', function(){
-    return view('layouts.master');
+Route::group(['prefix' => 'admin', 'middleware'=>['auth']], function(){
+    Route::resource('home', HomeController::class);
+    Route::resource('provinsi', ProvinsiController::class);
+    Route::resource('kota', KotaController::class);
+    Route::resource('kecamatan', KecamatanController::class);
+    Route::resource('kelurahan', KelurahanController::class);
+    Route::resource('rw', RwController::class);
+    Route::resource('tracking', TrackingController::class);
 });

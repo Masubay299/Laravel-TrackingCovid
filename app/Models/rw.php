@@ -13,11 +13,11 @@ class rw extends Model
     protected $fillable = ['id_kelurahan','nama_rw'];
     public $timestamps = true;
 
-    public function kelurahan(){
+    public function Kelurahan(){
         return $this->belongsTo(kelurahan::class);
     }
 
-    public function tracking(){
+    public function Tracking(){
         return $this->hasMany(tracking::class);
     }
 }

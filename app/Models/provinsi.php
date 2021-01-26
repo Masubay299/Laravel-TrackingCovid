@@ -13,7 +13,7 @@ class provinsi extends Model
     protected $fillable = ['nama_provinsi'];
     public $timestamps = true;
 
-    public function kota(){
+    public function Kota(){
         return $this->hasMany(kota::class);
     }
 

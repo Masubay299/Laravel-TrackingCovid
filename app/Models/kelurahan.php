@@ -13,11 +13,11 @@ class kelurahan extends Model
     protected $fillable = ['id_kecamatan','nama_kelurahan'];
     public $timestamps = true;
 
-    public function kecamatan(){
+    public function Kecamatan(){
         return $this->belongsTo(kecamatan::class);
     }
 
-    public function rw(){
+    public function Rw(){
         return $this->hasMany(rw::class);
     }
 }

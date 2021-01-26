@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    Ini halaman Dashboard
+                    Ini Halaman Dashboard
                 </div>
             </div>
         </div>
